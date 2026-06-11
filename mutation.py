@@ -93,30 +93,76 @@ def add_fluorine(smiles):
     except:
         return None
 
-mutation_functions = [
-    add_carbon,
-    oxygen_to_nitrogen,
-    add_fluorine
-]
 
-candidates = []
 
-for smi in seed_smiles:
+import random
+from rdkit import Chem
+from rdkit import Chem
+from rdkit.Chem import Descriptors
 
-    for _ in range(10):
+def electrolyte_filter(smiles):
 
-        fn = random.choice(
-            mutation_functions
-        )
+    mol = Chem.MolFromSmiles(smiles)
 
-        try:
+    if mol is None:
+        return False
 
-            new_smi = fn(smi)
+    mw = Descriptors.MolWt(mol)
 
-            if new_smi:
-                candidates.append(
-                    new_smi
-                )
+    if mw < 50:
+        return False
 
-        except:
-            pass
+    if mol.GetNumAtoms() < 5:
+        return False
+
+    return True
+def generate_candidates(
+    seed_smiles,
+    mutations_per_molecule=10
+):
+
+    mutation_functions = [
+        add_carbon,
+        oxygen_to_nitrogen,
+        add_fluorine
+    ]
+
+    candidates = []
+
+    for smi in seed_smiles:
+
+        for _ in range(
+            mutations_per_molecule
+        ):
+
+            fn = random.choice(
+                mutation_functions
+            )
+
+            try:
+
+                new_smi = fn(smi)
+
+                if new_smi:
+                    candidates.append(
+                        new_smi
+                    )
+
+            except:
+                pass
+
+    candidates = list(set(candidates))
+
+    valid = []
+
+    for smi in candidates:
+
+        mol = Chem.MolFromSmiles(smi)
+
+        if mol:
+            valid.append(smi)
+    valid = [
+    s for s in valid
+    if electrolyte_filter(s)]
+    return valid
+

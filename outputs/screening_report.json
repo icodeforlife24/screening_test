@@ -1,0 +1,92 @@
+{
+  "target_specification": {
+    "ionic_conductivity_min_mS_per_cm": 10.0,
+    "stability_window_min_V": 4.999999999999998,
+    "viscosity_max_cP": 5.0,
+    "thermal_stability_min_C": 150.0
+  },
+  "generator_type": "Candidate screening pipeline with diffusion-based seed loading and mutation-based generation",
+  "low_fidelity_model": "Random forest descriptor ranker",
+  "high_fidelity_model": "Distance-based recommendation engine",
+  "total_candidates_generated": 185,
+  "after_low_fidelity_screening": 185,
+  "after_high_fidelity_validation": 20,
+  "after_physical_constraints": 3,
+  "active_learning_rounds": 0,
+  "top_3_electrolytes": [
+    {
+      "rank": 1,
+      "name": "Candidate-1",
+      "smiles": "N=S1(=O)CC1",
+      "molecular_weight": 91.135,
+      "molecule_type": "Not classified in current pipeline",
+      "predicted_properties": {
+        "ionic_conductivity_mS_per_cm_at_25C": 3.6121743406404994,
+        "stability_window_V_vs_Li_Liplus": 2.5200611111111098,
+        "viscosity_cP_at_25C": 5.197843518518519,
+        "thermal_decomposition_C": 158.12658730158728
+      },
+      "confidence_intervals": null,
+      "novelty_score": null,
+      "similarity_to_existing": "Not computed in current pipeline",
+      "physical_constraints_passed": [
+        "Conductivity target met",
+        "Stability target met",
+        "Viscosity target met",
+        "Thermal target met"
+      ],
+      "synthesis_feasibility": "Not evaluated in current pipeline",
+      "falsifiable_electrochemical_test": "Run the platform electrochemical validation protocol on the selected candidate."
+    },
+    {
+      "rank": 2,
+      "name": "Candidate-2",
+      "smiles": "CCCC#N",
+      "molecular_weight": 69.107,
+      "molecule_type": "Not classified in current pipeline",
+      "predicted_properties": {
+        "ionic_conductivity_mS_per_cm_at_25C": 2.7137608581172596,
+        "stability_window_V_vs_Li_Liplus": 2.8131666666666564,
+        "viscosity_cP_at_25C": 4.603233333333323,
+        "thermal_decomposition_C": 127.81944444444443
+      },
+      "confidence_intervals": null,
+      "novelty_score": null,
+      "similarity_to_existing": "Not computed in current pipeline",
+      "physical_constraints_passed": [
+        "Conductivity target met",
+        "Stability target met",
+        "Viscosity target met",
+        "Thermal target met"
+      ],
+      "synthesis_feasibility": "Not evaluated in current pipeline",
+      "falsifiable_electrochemical_test": "Run the platform electrochemical validation protocol on the selected candidate."
+    },
+    {
+      "rank": 3,
+      "name": "Candidate-3",
+      "smiles": "Cc1ccccc1N=C=O",
+      "molecular_weight": 133.15,
+      "molecule_type": "Not classified in current pipeline",
+      "predicted_properties": {
+        "ionic_conductivity_mS_per_cm_at_25C": 2.2885258102318926,
+        "stability_window_V_vs_Li_Liplus": 2.3838925925925927,
+        "viscosity_cP_at_25C": 4.637851010101005,
+        "thermal_decomposition_C": 134.8788888888889
+      },
+      "confidence_intervals": null,
+      "novelty_score": null,
+      "similarity_to_existing": "Not computed in current pipeline",
+      "physical_constraints_passed": [
+        "Conductivity target met",
+        "Stability target met",
+        "Viscosity target met",
+        "Thermal target met"
+      ],
+      "synthesis_feasibility": "Not evaluated in current pipeline",
+      "falsifiable_electrochemical_test": "Run the platform electrochemical validation protocol on the selected candidate."
+    }
+  ],
+  "low_fidelity_vs_high_fidelity_correlation": null,
+  "execution_time_seconds": 9.012
+}

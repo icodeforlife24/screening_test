@@ -1,5 +1,5 @@
 import torch
-
+import pandas as pd
 def sample_ddpm(
     model,
     alphas,
@@ -65,3 +65,15 @@ def sample_ddpm(
             )
 
     return x.cpu()
+
+
+
+def load_seed_molecules(
+    csv_path="data/diffusion_generated.csv"
+):
+    df = pd.read_csv(csv_path)
+
+    if "SMILES" in df.columns:
+        return df["SMILES"].dropna().tolist()
+
+    return df.iloc[:,0].dropna().tolist()
