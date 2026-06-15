@@ -1,15 +1,15 @@
 {
   "target_specification": {
     "ionic_conductivity_min_mS_per_cm": 10.0,
-    "stability_window_min_V": 4.999999999999998,
-    "viscosity_max_cP": 5.0,
-    "thermal_stability_min_C": 150.0
+    "stability_window_min_V": 4.6,
+    "viscosity_max_cP": 2.0,
+    "thermal_stability_min_C": 200.0
   },
   "generator_type": "Candidate screening pipeline with diffusion-based seed loading and mutation-based generation",
   "low_fidelity_model": "Random forest descriptor ranker",
   "high_fidelity_model": "Distance-based recommendation engine",
-  "total_candidates_generated": 185,
-  "after_low_fidelity_screening": 185,
+  "total_candidates_generated": 189,
+  "after_low_fidelity_screening": 189,
   "after_high_fidelity_validation": 20,
   "after_physical_constraints": 3,
   "active_learning_rounds": 0,
@@ -17,14 +17,14 @@
     {
       "rank": 1,
       "name": "Candidate-1",
-      "smiles": "N=S1(=O)CC1",
-      "molecular_weight": 91.135,
+      "smiles": "O=C(OCF)C(F)(F)F",
+      "molecular_weight": 146.039,
       "molecule_type": "Not classified in current pipeline",
       "predicted_properties": {
-        "ionic_conductivity_mS_per_cm_at_25C": 3.6121743406404994,
-        "stability_window_V_vs_Li_Liplus": 2.5200611111111098,
-        "viscosity_cP_at_25C": 5.197843518518519,
-        "thermal_decomposition_C": 158.12658730158728
+        "ionic_conductivity_mS_per_cm_at_25C": 1.9488104993446957,
+        "stability_window_V_vs_Li_Liplus": 2.5512444805194807,
+        "viscosity_cP_at_25C": 1.6723944444444412,
+        "thermal_decomposition_C": 180.99081501831503
       },
       "confidence_intervals": null,
       "novelty_score": null,
@@ -41,14 +41,14 @@
     {
       "rank": 2,
       "name": "Candidate-2",
-      "smiles": "CCCC#N",
-      "molecular_weight": 69.107,
+      "smiles": "O=C1OCC(F)(F)O1",
+      "molecular_weight": 124.042,
       "molecule_type": "Not classified in current pipeline",
       "predicted_properties": {
-        "ionic_conductivity_mS_per_cm_at_25C": 2.7137608581172596,
-        "stability_window_V_vs_Li_Liplus": 2.8131666666666564,
-        "viscosity_cP_at_25C": 4.603233333333323,
-        "thermal_decomposition_C": 127.81944444444443
+        "ionic_conductivity_mS_per_cm_at_25C": 1.6926596680818362,
+        "stability_window_V_vs_Li_Liplus": 2.5304416666666754,
+        "viscosity_cP_at_25C": 2.087150000000001,
+        "thermal_decomposition_C": 154.75333333333333
       },
       "confidence_intervals": null,
       "novelty_score": null,
@@ -65,14 +65,14 @@
     {
       "rank": 3,
       "name": "Candidate-3",
-      "smiles": "Cc1ccccc1N=C=O",
-      "molecular_weight": 133.15,
+      "smiles": "COCCOCCOCF",
+      "molecular_weight": 152.165,
       "molecule_type": "Not classified in current pipeline",
       "predicted_properties": {
-        "ionic_conductivity_mS_per_cm_at_25C": 2.2885258102318926,
-        "stability_window_V_vs_Li_Liplus": 2.3838925925925927,
-        "viscosity_cP_at_25C": 4.637851010101005,
-        "thermal_decomposition_C": 134.8788888888889
+        "ionic_conductivity_mS_per_cm_at_25C": 1.6549153807566344,
+        "stability_window_V_vs_Li_Liplus": 2.4161645299145316,
+        "viscosity_cP_at_25C": 1.660602380952382,
+        "thermal_decomposition_C": 196.10979100529102
       },
       "confidence_intervals": null,
       "novelty_score": null,
@@ -88,5 +88,5 @@
     }
   ],
   "low_fidelity_vs_high_fidelity_correlation": null,
-  "execution_time_seconds": 9.012
+  "execution_time_seconds": 11.769
 }
